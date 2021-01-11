@@ -3,7 +3,7 @@ package heaps;
 import java.util.*;
 
 /*This is zero based indexing */
-
+/*This is a min heap*/
 public class Heap {
 	
 	
