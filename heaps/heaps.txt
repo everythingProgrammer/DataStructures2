@@ -1,0 +1,5 @@
+K sorted array question 
+	when we have a question where we can only move element by +- k distance then start from left since you can't go more
+	left so we have window right k only ... 
+	
+		
