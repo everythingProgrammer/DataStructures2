@@ -30,6 +30,7 @@ public class MaxHeap {
 			}
 			l = data.get(root*2 +1);
 			int gr = l>r?root*2+1 : root*2+2;
+			if(gr> root)
 			swap(root, gr);
 			root = gr;
 		}

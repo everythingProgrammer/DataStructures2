@@ -24,15 +24,18 @@ public class Heap {
 		data.remove(data.size()-1);
 		int root = 0 ;
 		while(true) {
-			if( (root *2) +1 >= data.size() )
+			if( (root *2) +1 > data.size() ) {
+//				System.out.println(data.size()+ "  break executed  root - "+root);
 				break;
+			}
 			int l =Integer.MAX_VALUE , r =Integer.MAX_VALUE;
 			if( (root*2) + 2 < data.size()) {
 				r = data.get(root*2 +2);
 			}
 			l = data.get(root*2 +1);
 			int gr = l<r?root*2+1 : root*2+2;
-			swap(root, gr);
+			if(gr< root)
+				swap(root, gr);
 			root = gr;
 		}
 		
