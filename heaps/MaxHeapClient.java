@@ -48,9 +48,7 @@ public class MaxHeapClient {
 		System.out.println("kth largest element");
 		System.out.println(obj.pop());
 		
-		
-		
-		
+	
 	}
 	
 	
