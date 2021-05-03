@@ -26,6 +26,11 @@ public class JustGreaterElement {
 			System.out.println(s.pop());
 		}
 	}
+	
+	
+	
+	
+	
 	public static void main(String args[]) {
 		
 		int arr[] = {50,30,20,40,10,45,5,60,15,8};

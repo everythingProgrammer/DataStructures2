@@ -50,7 +50,7 @@ public class JustGreaterElement2 {
 		Stack<Integer> stack = new Stack<>();
 		for(int i = 2*nums.length -1;i>=0; i-- ) {
 			
-			while(!stack.isEmpty() && nums[stack.peek()]>= nums[i%nums.length]) {
+			while(!stack.isEmpty() && nums[stack.peek()]<= nums[i%nums.length]) {
 				stack.pop();
 			}
 			res[i%nums.length] = stack.isEmpty()?-1:nums[stack.peek()];
@@ -61,9 +61,35 @@ public class JustGreaterElement2 {
 		}
 	}
 	
+	
+	// simple straight loop program with stacks
+	/* simply push indexes instead of running backward loops
+	 * but this does't work for cirucular array  edit: made the loop run twice better than previous approach */
+	public static void nextGreaterElements4(int nums[]) {
+		Stack<Integer> stack = new Stack<>();
+		int res [] = new int [nums.length];
+		for(int i =  0 ; i<res.length; i++) {
+			res[i] = -1;
+		}
+		stack.push(0);
+		for(int i = 0 ; i<nums.length*2-1; i++) {
+			int num = nums[i%nums.length];
+			while(!stack.isEmpty() && nums[i%nums.length]>nums[stack.peek()]) {
+					res[stack.pop()] = nums[i%nums.length];
+			}
+			stack.push(i%nums.length);
+		}
+		for(int n:res) {
+			System.out.print(n+" ");
+		}
+		
+	}
+	
 	public static void main(String args[]) {
-		int nums[] = {3,8,4,1,2};
+		int nums[] = {8,1,8,4,1,2};
 		nextGreaterElements3(nums);
+		System.out.println();
+		nextGreaterElements4(nums);
 	}
 	
 	
