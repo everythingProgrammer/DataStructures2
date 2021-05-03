@@ -20,6 +20,35 @@ public class StockSpanner {
 	    }
 	    
 	    
+	    
+	    
+	    public static void spanner(int nums[]) {
+	    	Stack<Integer> stack = new Stack<>();
+	    	int res[] = new int[nums.length];
+	    	
+	    	 for(int i = 0 ;i<nums.length; i++) {
+	    		res[i] = 1;
+	    		while(!stack.isEmpty() && nums[stack.peek()]<=nums[i] ) {
+	    			
+	    			stack.pop();
+	    		}
+	    		if(stack.isEmpty()) {
+	    			/**/
+	    			res[i] = i;
+	    		}
+	    		else {
+	    			res[i] = i-stack.peek()-1;
+	    		}
+	    		stack.push(i);
+	    	}
+	    	
+	    	
+	    	for(int a:res) {
+	    		System.out.print (a+",");
+	    	}
+	    	
+	    }
+	    
 	    public static void main(String args[]) {
 	    	StockSpanner s1  = new StockSpanner();
 	    	System.out.print (s1.next(80));
@@ -29,5 +58,7 @@ public class StockSpanner {
 	    	System.out.print (s1.next(20));
 	    	System.out.print (s1.next(40));
 	    	System.out.print (s1.next(90));
+	    	int arr[]= {80,50,70,30,20,40,90};
+	    	 spanner(arr);
 	    }
 }
