@@ -86,7 +86,8 @@ public class JustGreaterElement2 {
 	}
 	
 	public static void main(String args[]) {
-		int nums[] = {8,1,8,4,1,2};
+//		int nums[] = {8,1,8,4,1,2};
+		int nums[] = {50,30,20,40,10,45,5,60,8,15};
 		nextGreaterElements3(nums);
 		System.out.println();
 		nextGreaterElements4(nums);
