@@ -18,4 +18,16 @@ public class StockSpanner {
 	        weights.push(w);
 	        return w;
 	    }
+	    
+	    
+	    public static void main(String args[]) {
+	    	StockSpanner s1  = new StockSpanner();
+	    	System.out.print (s1.next(80));
+	    	System.out.print(s1.next(50));
+	    	System.out.print (s1.next(70));
+	    	System.out.print (s1.next(30));
+	    	System.out.print (s1.next(20));
+	    	System.out.print (s1.next(40));
+	    	System.out.print (s1.next(90));
+	    }
 }
