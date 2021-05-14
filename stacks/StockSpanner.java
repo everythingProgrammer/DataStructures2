@@ -34,31 +34,32 @@ public class StockSpanner {
 	    		}
 	    		if(stack.isEmpty()) {
 	    			/**/
-	    			res[i] = i;
+	    			res[i] = i+1;
 	    		}
 	    		else {
-	    			res[i] = i-stack.peek()-1;
+	    			res[i] = i-stack.peek();
 	    		}
 	    		stack.push(i);
 	    	}
 	    	
 	    	
 	    	for(int a:res) {
-	    		System.out.print (a+",");
+	    		System.out.print (a+" ");
 	    	}
 	    	
 	    }
 	    
 	    public static void main(String args[]) {
 	    	StockSpanner s1  = new StockSpanner();
-	    	System.out.print (s1.next(80));
-	    	System.out.print(s1.next(50));
-	    	System.out.print (s1.next(70));
-	    	System.out.print (s1.next(30));
-	    	System.out.print (s1.next(20));
-	    	System.out.print (s1.next(40));
-	    	System.out.print (s1.next(90));
-	    	int arr[]= {80,50,70,30,20,40,90};
+//	    	System.out.print (s1.next(80));
+//	    	System.out.print(s1.next(50));
+//	    	System.out.print (s1.next(70));
+//	    	System.out.print (s1.next(30));
+//	    	System.out.print (s1.next(20));
+//	    	System.out.print (s1.next(40));
+//	    	System.out.print (s1.next(90));
+//	    	int arr[]= {80,50,70,30,20,40,90};
+	    	int arr[] = {30,35,40,38,35};
 	    	 spanner(arr);
 	    }
 }
