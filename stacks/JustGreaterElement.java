@@ -33,7 +33,7 @@ public class JustGreaterElement {
 	
 	public static void main(String args[]) {
 		
-		int arr[] = {50,30,20,40,10,45,5,60,15,8};
+		int arr[] = {11, 13, 21, 3};
 //		int arr[] = {1,2,3,4,3,1,2,3,4,3};
 		nextGreater(arr);
 		
