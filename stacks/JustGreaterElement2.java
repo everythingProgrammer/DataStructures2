@@ -25,7 +25,7 @@ public class JustGreaterElement2 {
 
 	}
 
-	public int[] nextGreaterElemnts2(int nums[]) {
+	public static int[] nextGreaterElemnts2(int nums[]) {
 		int res[] = new int[nums.length];
 
 		for (int i = 0; i < nums.length; i++) { // first loop to lock on the int
@@ -84,7 +84,9 @@ public class JustGreaterElement2 {
 
 	public static void main(String args[]) {
 //		int nums[] = {8,1,8,4,1,2};
-		int nums[] = { 50, 30, 20, 40, 10, 45, 5, 60, 8, 15 };
+		int nums[] = { 11, 13, 21, 3 };
+		nextGreaterElemnts2(nums);
+		System.out.println();
 		nextGreaterElements3(nums);
 		System.out.println();
 		nextGreaterElements4(nums);
